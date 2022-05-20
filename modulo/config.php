@@ -14,6 +14,24 @@ const EXT_FILE_UPLOAD = array("image/jpg", "image/png", "image/gif", "image/jpeg
 
 const DIRETORIO_FILE_UPLOAD = "arquivos/";
 
+define( 'SRC',  $_SERVER['DOCUMENT_ROOT'].'/Danilo/conexaoBanco/');
 
+    function createJSON ($arrayDados){
+        //valiação para tratar array sem dados
+        if(!empty($arrayDados)){
+
+            //configura o padrão da conversão para o formato JSON
+            header('Content-Type: application/json');
+            $dadosJson = json_encode($arrayDados);
+    
+            //json_encode() converte um array para json
+            //json_decode() converte um json para array
+    
+            return $dadosJson;
+        }else{
+            return false;
+        }
+      
+    }
 
 ?>

@@ -9,7 +9,7 @@
 const SERVER = 'localhost';
 const USER = 'root';
 const PASSWORD = 'bcd127';
-const DATABASE = 'dbcontatos';
+const DATABASE = 'dbContatos';
 
 // $resultado = conectarMysql();
 

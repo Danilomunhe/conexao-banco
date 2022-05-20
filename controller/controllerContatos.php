@@ -8,7 +8,7 @@
  * Versão: 1.0
  *************************************************************************************/
 
-require_once('./modulo/config.php');
+require_once(SRC.'modulo/config.php');
 
 // Função para receber dados da View w caminhar para a model (inserir)
 function inserirContato($dadosContato, $file)
@@ -190,7 +190,7 @@ function listarContato()
 {
 
     // import do arquivo que vai buscar os dados no Banco de dados
-    require_once('model/bd/contato.php');
+    require_once(SRC.'./model/bd/contato.php');
 
     // Chama a função que vai buscar os dados no Banco de dados
     $dados = selectAllContato();
@@ -209,7 +209,7 @@ function buscarContato($id)
     if ($id != 0 && !empty($id) && is_numeric($id)) {
 
         // import do arquivo de contato
-        require_once('model/bd/contato.php');
+        require_once(SRC.'model/bd/contato.php');
 
         // Chama a função na model que vai buscar no banco de dados
         $dados = selectByIdContato($id);

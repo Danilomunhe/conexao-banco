@@ -25,7 +25,7 @@ function insertContato($dadosContato)
                 telefone, 
                 celular, 
                 email, 
-                observacao,
+                obs,
                 foto,
                 idestado)
             values
@@ -144,7 +144,7 @@ function selectAllContato()
                 "telefone"  =>  $rsDados['telefone'],
                 "celular"   =>  $rsDados['celular'],
                 "email"     =>  $rsDados['email'],
-                "obs"       =>  $rsDados['observacao'],
+                "obs"       =>  $rsDados['obs'],
                 "foto"      =>  $rsDados['foto'],
                 "idEstado"  =>  $rsDados['idEstado']
             );
@@ -189,7 +189,7 @@ function selectByIdContato($id)
                 "telefone"  =>  $rsDados['telefone'],
                 "celular"   =>  $rsDados['celular'],
                 "email"     =>  $rsDados['email'],
-                "obs"       =>  $rsDados['observacao'],
+                "obs"       =>  $rsDados['obs'],
                 "foto"       =>  $rsDados['foto'],
                 "idEstado"  =>  $rsDados['idEstado']
             );

@@ -9,7 +9,7 @@
  * Data: 04/03/2022
  * Versão: 1.0
  ******************************************************************************/
-
+require_once('modulo/config.php');
 $action = (string) null;
 $component = (string) null;
 
