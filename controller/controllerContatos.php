@@ -159,9 +159,9 @@ function excluirContato($arrayDados)
     if ($id != 0 && !empty($id) && is_numeric($id)) {
 
         // import do arquivo de contato
-        require_once('model/bd/contato.php');
+        require_once(SRC.'model/bd/contato.php');
         // import do arquivo de configurações do projeto
-        require_once('modulo/config.php');
+        // require_once('modulo/config.php');
 
         // Chama a função da model e valida se o retorno foi verdadeiro ou false
         if (deleteContato($id)) {
@@ -169,7 +169,7 @@ function excluirContato($arrayDados)
             if ($foto != null) {
 
                 // Permite apagar a foto fisicamente do diretório no servidor (unlink())
-                unlink(DIRETORIO_FILE_UPLOAD . $foto);
+                @unlink(SRC.DIRETORIO_FILE_UPLOAD . $foto);
                 return true;
             } else
                 return true;

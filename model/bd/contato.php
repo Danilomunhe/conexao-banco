@@ -199,5 +199,8 @@ function selectByIdContato($id)
     // Solicita o fechamento da conexão com o Banco de dados
     fecharConexaoMysql($conexao);
 
-    return $arrayDados;
+    if(isset($arrayDados))
+        return $arrayDados;
+    else
+        return false;
 }
