@@ -10,7 +10,7 @@
 function uploadFile($arrayFile){
 
     // import do arquivo de configurações do projeto
-    require_once('modulo/config.php');
+    require_once(SRC.'modulo/config.php');
 
     $arquivo = $arrayFile;
     $sizeFile = (int) 0;
@@ -56,7 +56,7 @@ function uploadFile($arrayFile){
                 $foto = $nomeCripty.".".$extensao;
 
                 // Movendo o arquivo da pasta temporária para a pasta "arquivo" local do projeto
-                if (move_uploaded_file($tempFile, DIRETORIO_FILE_UPLOAD.$foto)){
+                if (move_uploaded_file($tempFile, SRC.DIRETORIO_FILE_UPLOAD.$foto)){
                     return $foto;
 
                 } else {

@@ -32,10 +32,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET')
       if ($action == 'INSERIR') {
 
         if(isset($_FILES) && !empty($_FILES)){
+
+          $arrayDados = array($_POST, 
+          "file" => $_FILES);
+
           // Chama a função de inserir na controller
-          $resposta = inserirContato($_POST, $_FILES);
+          $resposta = inserirContato($arrayDados);
         } else {
-          $resposta = inserirContato($_POST, null);
+
+          $arrayDados = array($_POST, 
+          "file" => null);
+          $resposta = inserirContato($arrayDados);
         }
 
         // Valida se o retorno foi verdadeiro
